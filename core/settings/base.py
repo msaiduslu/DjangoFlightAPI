@@ -126,10 +126,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATIC_ROOT = BASE_DIR / STATIC_URL
-STATICFILES_DIRS = [
-    BASE_DIR / STATIC_URL
-]
+STATIC_ROOT = BASE_DIR / STATIC_URL
+# STATICFILES_DIRS = [
+#     BASE_DIR / STATIC_URL
+# ]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / MEDIA_URL
 
@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication'],
-    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAuthenticatedOrReadOnly'],
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.IsAdminUser'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
 }
