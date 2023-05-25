@@ -12,7 +12,7 @@ urlpatterns = [
     
 ]
 router = DefaultRouter()
-router.register('passanger',PassengerView)
+router.register('passenger',PassengerView)
 router.register('flight',FlightView)
 router.register('reservation',ReservationView)
 urlpatterns += router.urls
